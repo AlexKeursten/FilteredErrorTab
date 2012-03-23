@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/TeamCity/devPackage/server-api.jar"/>
+	<classpathentry kind="lib" path="C:/TeamCity/devPackage/agent-api.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-7.0.23-windows-x86/apache-tomcat-7.0.23/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-7.0.23-windows-x86/apache-tomcat-7.0.23/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/TeamCity/devPackage/common-api.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/akeursten/My Documents/Downloads/apache-log4j-1.2.16/apache-log4j-1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/akeursten/My Documents/Downloads/commons-io-2.1-bin/commons-io-2.1/commons-io-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/akeursten/My Documents/Downloads/annotations-6.0.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

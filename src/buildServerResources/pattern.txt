@@ -1,0 +1,227 @@
+##THIS IS A COMMENT
+##Do not repeat the //[Colour]PATTERN lines
+
+##Any edits to this file should not require the teamcity server to be restarted
+
+##If a line is getting removed and it shouldn't be it is easier to add it to the KEEPPATTERN section
+ 
+##If you have a new pattern that appears in a line add it by using "| new pattern" at the end of this section
+##If you want to use the fact that your pattern uses the whole line add in the full line section
+##Remove Pattern lines
+^\s*$|
+^\s*\Q[\E\d*:\d*:\d*\Q]\E:?\s*(\Q[\E.*?\Q]\E\s*)?(
+##This is the full line section
+[a-zA-Z0-9/=-]*(\s\Q(\E\d+s\Q)\E)?|
+Clearing temporary directory: ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?|
+Checkout directory: ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?|
+(Processing|Starting:) ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s|\\)+)+\\?|
+in directory: (([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?|(/[a-zA-Z0-9_.-]+)+)|
+Deleted file - ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?|
+(\\|[a-zA-Z0-9_.-])*|
+([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?|
+(Copying|Compiling) \d*( source)? file(s)? to ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?|
+Build log was saved at \".*?\"|
+copy /Y \"([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?\" \"([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?\"|
+Creating library ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-/]|\s)+)+\\? and object ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-/]|\s)+)+\\?|
+([a-zA-Z]:)?(\\([a-zA-Z0-9_.-/])+)+\\?\Q(\E\d*\Q)\E : warning .*?: '.*?' : not all control paths return a value|
+([a-zA-Z0-9/_-])*\Q.\E([a-zA-Z0-9]){0,3}\Q(\E([a-zA-Z0-9/_-])*\Q.\E([a-zA-Z0-9]){0,3}\Q)\E : warning ([a-zA-Z0-9])*: ([a-zA-Z0-9]){0,3} '.*?' was not found with '.*?' or at '.*?'; linking object as if no debug info|
+warning [a-zA-Z0-9]*: The predefined type '.*?' is defined in multiple assemblies in the global alias; using definition from '.*?'|
+([a-zA-Z]:)?(\\([a-zA-Z0-9_./-])+)+\\?\Q(\E[0-9]*,[0-9]*\Q)\E: warning ([a-zA-Z0-9])*: The field '.*?' is never used|
+\"([a-zA-Z]:)?(\\([a-zA-Z0-9_./-])+)+\\?\" ([a-zA-Z0-9_.-])* /[a-zA-Z0-9_.-]*:[a-zA-Z0-9_.-]*|
+Creating [a-zA-Z0-9]* file for [a-zA-Z0-9]* [0-9_.]*|
+Assembly exported to '([a-zA-Z]:)?(\\([a-zA-Z0-9_.-])+)+\\?'|
+Installing .*?|
+Comparing ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\\)+)+\\? and ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\\)+)+\\?|
+Compare more files \Q(\EY/N\Q)\E \Q?\E n|
+([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\\)+)+\\?|
+Consider [a-zA-Z0-9.]+ remapping of assembly \"[a-zA-Z]+, Culture=[a-zA-Z]+, PublicKeyToken=[a-zA-Z0-9]+\" from Version \"[0-9.]+\" \Q[\E\Q]\E to Version \"[0-9.]+\" \Q[\E([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\s)+)+\\?\Q]\E to solve conflict and get rid of warning.|
+([a-zA-Z]:)?(\\([a-zA-Z0-9/_.-])+)+\\? : warning [a-zA-Z0-9]+: Found conflicts between different versions of the same dependent assembly.|
+([a-zA-Z]:)?(\Q.\E)?(\\(\s|[a-zA-Z0-9/_.-])+)+\\?\Q(\E\d*(,\d*)?\Q)\E\s?: (warning [a-zA-Z0-9]+: .*?|see (previous definition|declaration) of '.*?')|
+(\s|[a-zA-Z0-9_.\\-])+(\Q(\E[a-zA-Z0-9_.-]+\Q)\E)? : warning [a-zA-Z0-9]+: .*?|
+c_(\s|[a-zA-Z0-9/_.-])+\Q(\E\d*(,\d*)?\Q)\E\s?: warning [a-zA-Z0-9]+: .*?|
+copy /Y ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-])+)+\\? ([a-zA-Z]:)?(\\([a-zA-Z0-9_.-]|\\)+)+\\?|
+\"([a-zA-Z]:)?(\\([a-zA-Z0-9_.-])+)+\\?\" \Q(\Edefault target\Q)\E \Q(\E\d+\Q)\E ->|
+\Q(\E[a-zA-Z]+ target\Q)\E -> |
+-*?|_.*?|
+[0-9a-zA-Z_]+=\W.*?\W|
+Configuring [a-zA-Z0-9_-]+(...)?|
+(Linking|Building deps for|Building install for|Generating|Compiling)? ([a-zA-Z0-9._-]+)?(/[a-zA-Z0-9._-]+)+|
+Compiling [a-zA-Z._-]+|
+/?([a-zA-Z0-9_.-]+/)*[a-zA-Z0-9_.-]+:([0-9]+:){0,2} note: .*?|
+/?([a-zA-Z0-9_.-]+/)*[a-zA-Z0-9_.-]+: In function '.*?':|
+\d* file\Q(\Es\Q)\E copied.|
+(Looking|[cC]hecking) .*?|
+Klocwork does not deploy runtime package for your version of Visual Studio. Add necessary dlls to your package .*?|
+[a-zA-Z]\\[a-zA-Z0-9_.-]+: OK|
+cl : Command line warning [a-zA-Z0-9]+ : option '[a-zA-Z0-9]+' has been deprecated and will be removed in a future release|
+\W|
+Setting icon for .*?|
+Files compare OK|
+.*? code|
+[a-zA-Z]+ [a-zA-Z-]+\s?([a-zA-Z-]+)?\s?\Q...\E|
+.{500,}|
+Build log was saved at .*?|
+(Skipping|Considered|Expanding:|Created dir:|Personal changes:|Undo personal changes:) .*?|
+Deleting file \".*?\"|
+Not an exact match|
+No: One or more subconditions was false|
+No, .*?|
+No: .*?|
+Yes, .*?|
+Yes: .*?|
+Rule did not match|
+Rule was a match and will be used|
+Note: .*?|
+-sign.jar \Q(\E[0-9]+s\Q)\E|
+Signing JAR: .*?|
+Creating .*?|
+Building jar: .*?|
+Processing resource file|
+Module '.*?' has already been loaded and will be skipped|
+Unknown type '.*?' specified in deferred binding rule|
+Property value is 'true'|
+Performing substitution in node .*?|
+Property value is '.*?'|
+Considering query java\Q.\E[a-zA-Z.]*|
+[a-zA-Z.]+.*? might be instantiable|
+[a-zA-Z.]+&lt;[a-zA-Z.]+&gt;|
+[a-zA-Z.]+<[a-zA-Z.]+>|
+Is instantiable|
+Finding possibly instantiable subtypes|
+subtype [a-zA-Z.]+ is not instantiable|
+Verifying instantiability|
+Identified [0-9]+ serializable types?|
+Generating a field serializer for type '.*?'|
+Preparing pending output resource '.*?'|
+Generator returned class '.*?'; in [0-9]+ ms|
+Invoking generator [0-9a-zA-Z.]+|
+Finding resources|
+Preparing method [a-zA-Z]+|
+Adding image '.*?'|
+(public|protected|private) [a-zA-Z.]+ [a-zA-Z]+|
+boolean [a-zA-Z]+|
+ImageResources already prepared|
+(Initializing|Finishing) ResourceGenerator|
+Using (cashed (data|result)|inline resources)|
+Scanning CSS for requirements|
+Assimilating generated source|
+Analyzing implicit types|
+Removing invalidated units|
+Validating newly compiled units|
+Considering query [a-zA-Z0-9.]+|
+Generating client proxy for remote service interface '.*?'|
+Generating method body for [a-zA-Z0-9]+\Q(\E\Q)\E|
+Preparing method [a-zA-Z0-9_]+|
+Using cached result|
+.important.|
+Throws:|
+Computing CSS class replacements|
+Using cached data|
+Analyzing component type:|
+Covariant array types|
+Finding operable CssResource subtypes|
+Replacing CSS class names|
+Replacing property-based @if blocks|
+Added [0-9]+ units to persistent cache.|
+Adding '[0-9]+' new generated units|
+Using static resources|
+Interfaces are in sync|
+Successfully compiled permutation|
+Compiling permutation [0-9]+...|
+Splitting JavaScript for incremental download|
+Permutation took [0-9]+ ms|
+Emitting RPC log files|
+)$|
+##End of full line matches
+Module location|
+Loading inherited module|
+Found better fallback match for|
+when-(type-is|assignable) class=|
+Rebind result was|
+Rebinding|
+when-(property-is|linkers-include) name=|
+already exists and will not be re-created|
+that qualify for serialization|
+Scanning for additional dependencies|
+Emitting resource|
+Assigning split point|
+Invoking Linker|
+Parsing CSS stylesheet|
+will not be serialized because it is final|
+module-build.compile|
+-compile.tests|
+is not default instantiable|
+Parameter:|
+nor does it have a custom field serializer|
+Computing all possible rebind results for|
+Fixed up load-order dependencies|
+Constructing interface|
+has no available instantiable subtypes.|
+is already a root type.
+
+##Add patterns here that you want to be red, once again it has a full line section
+//REDPATTERN
+^\s*\Q[\E\d*:\d*:\d*\Q]\E:?\s*(\Q[\E.*?\Q]\E\s*)?\s*(
+Java returned: 1|
+Process exited with code 1|
+make install failed|
+[a-zA-Z_./]+:(\d*:)+ error: '.*?' was not declared in this scope|
+Malformed object file|
+Tests run: [0-9]+, Failures: [1-9][0-9]*, Errors: [0-9]+, Time elapsed: [0-9.]+ sec|
+Tests run: [0-9]+, Failures: [0-9]*, Errors: [1-9][0-9]+, Time elapsed: [0-9.]+ sec|
+Cannot find build file by path specified in build configuration settings: .*?|
+\Q[\ETest Error Output\Q]\E|
+WindowsError: .*?|
+Could not create the Java virtual machine.
+)\s*$|
+exec returned: [1-9]|
+-- FAILED.|
+Error [1-9][0-9]*|
+Error result|
+fatal error|
+[1-9][0-9]* error|
+Standard Error|
+BUILD FAILED|
+Invalid initial heap size:|
+is not recognized as an internal or external command|
+Error: Unrecognized option|
+Fatal Error|
+CalledProcessError|
+Server certificate verification failed:|
+Error validating|
+[0-9]+:[0-9]+: error:
+
+##Add patterns here that you want to be yellow
+//ORANGEPATTERN
+^\s*\Q[\E\d*:\d*:\d*\Q]\E:?\s*(\Q[\E.*?\Q]\E\s*)?\s*(
+WARNING: .*?|
+[a-zA-Z]?:?(\\([a-zA-Z0-9/_.-])+)+\\?: FAIL|
+Warning: [a-zA-Z0-9]+ could not be determined, trying to read it from environment|
+Warning: circular reference detected in property sheets|
+WARNING: [a-zA-Z0-9_.-]+ declares deprecated .*?|
+Bad request: .*?
+)$|ERROR|Error: error|
+warning: Cannot find annotation method|
+WARN
+##Add patterns here that you want to keep
+//KEEPPATTERN
+^\s*\Q[\E\d*:\d*:\d*\Q]\E:?\s*(\Q[\E.*?\Q]\E\s*)?(
+test[a-zA-Z0-9_.-]+
+)$|
+Building master help...|
+^\s*\Q[\E\d*:\d*:\d*\Q]\E:?\s*(\Q[\Etest[a-zA-Z0-9_.-]*\Q]\E\s*)?\s*$
+
+##Add patterns here that you want to start a tree build
+##However new additions will likely have "No name" unless you edit the jsp file
+//STARTBUILDPATTERN
+------ Build started: Project: .*?, Configuration: Release .*? ------|
+Testsuite: [a-zA-Z0-9_.-]+|
+Errors in 'jar:file
+
+##Add patterns here that you want to for ending the build
+//ENDBUILDPATTERN
+.*? - \d+ error\Q(\Es\Q)\E, \d+ warning\Q(\Es\Q)\E$|
+SUCCEEDED:\s*[a-zA-Z0-9]+$|
+Compile complete -- \d+ errors, \d+ warnings$|
+Tests run: \d+, Failures: \d+, Errors: \d+, Time elapsed: \d+.\d+ sec
+

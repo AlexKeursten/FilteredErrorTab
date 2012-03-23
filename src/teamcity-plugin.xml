@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:shemas-jetbrains-com:teamcity-plugin-v1-xml">
+  <info>
+    <name>errorLogTab</name>
+    <display-name>Error Build Log</display-name>
+    <version>1</version>
+    <description>Additional build results tab for custom messages filtering</description>
+    <vendor>
+      <name>myName</name>
+      <url>myURL</url>
+    </vendor>
+  </info>
+  <deployment use-separate-classloader="true"/>
+</teamcity-plugin>
